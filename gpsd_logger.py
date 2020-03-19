@@ -46,8 +46,9 @@ while True:
             sleep(1)
 
     else:
-        print(" Latitude: NA")
-        print(" Longitude: NA")
+        print("Waiting for a fix........")
+        sleep(0.2)
+ 
         
 
 
