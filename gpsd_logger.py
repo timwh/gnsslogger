@@ -17,8 +17,7 @@ from time import strftime, sleep
 # GLOBAL
 timestr=strftime("%Y%m%d--%H%M%S-%Z")
 
-# FUNCTIONS
-# Log file setup
+# Function: Log file setup
 def get_file_name():
     #use date and time to name file
     return "GPSlog_" + timestr + ".txt"
@@ -28,12 +27,8 @@ path = "/home/pi/data/"+ name
 with open(path,"w") as log:
     log.write("time,lat,long\n")
 
-# OPEN PORTS
-# Connect to the local gpsd
+# Connect to the local gps daemon
 gpsd.connect()
-
-# Get current gps position
-packet = gpsd.get_current()
 
 #Run loop
 while True:
@@ -43,7 +38,6 @@ while True:
         # write to file
         with open(path, "a") as log:
             log.write("{0},{1},{2}\n".format(str(packet.time), str(packet.lat), str(packet.lon)))
-            sleep(1)
 
     else:
         print("Waiting for a fix........")
