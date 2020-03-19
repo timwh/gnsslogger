@@ -10,5 +10,5 @@ For it to work:
 The script requires the gpsd service daemon installed on the RPiz
 https://gpsd.gitlab.io/gpsd/index.html
 
-and the gps3 package installed - https://pypi.org/project/gps3/
-  pip3 install gps3
+and the gpsd-py3 package installed - https://github.com/MartijnBraam/gpsd-py3
+ -- pip3 install gpsd-py3
