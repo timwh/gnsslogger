@@ -10,5 +10,7 @@ For it to work:
 The script requires the gpsd service daemon installed on the RPiz
 https://gpsd.gitlab.io/gpsd/index.html
 
-and the gpsd-py3 package installed - https://github.com/MartijnBraam/gpsd-py3
+Good instructions for installing GPSD are here: https://ozzmaker.com/berrygps-setup-guide-raspberry-pi/
+
+Also required is the gpsd-py3 package to interpret - https://github.com/MartijnBraam/gpsd-py3
  -- pip3 install gpsd-py3
