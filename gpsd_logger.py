@@ -7,10 +7,10 @@
 #  - make sure all relevant libraries/packages are installed
 #  - place this script in /home/pi
 #  - create a folder in /home/pi called data
+#  - requires gpsd service daemon installed and running--- https://gpsd.gitlab.io/gpsd/index.html
+#  - also requires the package gpsd-py3 installed as an interface to gpsd --- https://github.com/MartijnBraam/gpsd-py3
 # -------------------------------------------------------------------
 # LIBRARIES
-# requires gpsd service daemon installed and running--- https://gpsd.gitlab.io/gpsd/index.html
-# also requires the package gpsd-py3 installed as an interface to gpsd --- https://github.com/MartijnBraam/gpsd-py3
 import gpsd
 from time import strftime, sleep
 
