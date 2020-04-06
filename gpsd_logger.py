@@ -9,11 +9,16 @@
 #  - create a folder in /home/pi called data
 #  - requires gpsd service daemon installed and running--- https://gpsd.gitlab.io/gpsd/index.html
 #  - also requires the package gpsd-py3 installed as an interface to gpsd --- https://github.com/MartijnBraam/gpsd-py3
-#  - sudo ln -s /lib/systemd/system/gpsd.service /etc/systemd/system/multi-user.target.wants/
+#  -
 # -------------------------------------------------------------------
 # LIBRARIES
 import gpsd
 from time import strftime, sleep
+from os import system  # needed to run start daemon (pi zero doesn't start it automatically for some reason)
+
+# starting gpsd daemon
+startCmd = 'sudo gpsd /dev/serial0 -F /var/run/gpsd.sock'
+system(startCmd)
 
 # GLOBAL
 timestr=strftime("%Y%m%d--%H%M%S-%Z")
