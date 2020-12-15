@@ -21,7 +21,7 @@ Also required is the gpsd-py3 package as an interface to gpsd - https://github.c
  
 Once GNSS quality is greater than 2D, polling occurs.
 Terminal output is time, latitude, longitude, mode and number of satellites
-The saved output is a comma separated text file in the data folder named "GPSlog_%Y%m%d--%H%M%S-%Z.txt", where Y is year, m is month, d is day, H is hour, M is minute, S is second and Z refers to zulu or UTC time.
+The saved output is a comma separated text file in the data folder named "GNSSlog_%Y%m%d--%H%M%S-%Z.txt", where Y is year, m is month, d is day, H is hour, M is minute, S is second and Z refers to zulu or UTC time.
 Columns in the file are time, latitude and longitude
 
 Further objects that can be polled are listed here:
