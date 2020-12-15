@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -------------------------------------------------------------------
-# A data logger GPS on RPi zero W
-# GPS connected to ttyS0 (serial0)
+# A data logger for GNSS on RPi zero W
+# GNSS connected to ttyS0 (serial0)
 # Tim Whiteside
 # For it to work:
 #  - make sure all relevant libraries/packages are installed
