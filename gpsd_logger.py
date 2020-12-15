@@ -9,8 +9,9 @@
 #  - create a folder in /home/pi called data
 #  - requires gpsd service daemon installed and running--- https://gpsd.gitlab.io/gpsd/index.html
 #  - also requires the package gpsd-py3 installed as an interface to gpsd --- https://github.com/MartijnBraam/gpsd-py3
-#  - prior to running the script start the gpsd daemon with this command: sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
+#  - if the system command in the script below does not work, prior to re-running the script you can start the gpsd daemon with this command: sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
 # -------------------------------------------------------------------
+
 # LIBRARIES
 import gpsd
 from time import strftime, sleep
@@ -26,7 +27,7 @@ timestr=strftime("%Y%m%d--%H%M%S-%Z")
 # Function: Log file setup
 def get_file_name():
     #use date and time to name file
-    return "GPSlog_" + timestr + ".txt"
+    return "GNSSlog_" + timestr + ".txt"
 # Get full path for writing and set up headers
 name = get_file_name()
 path = "/home/pi/data/"+ name
@@ -38,7 +39,7 @@ gpsd.connect()
 
 #Run loop
 while True:
-    packet = gpsd.get_current()  # poll GPS location
+    packet = gpsd.get_current()  # poll GNSS location
     if packet.mode >= 2:
         print("Time: " + str(packet.time), " Latitude: " + str(packet.lat), " Longitude: " + str(packet.lon), "  Mode: " + str(packet.mode),"Sats: " + str(packet.sats))
         # write to file
