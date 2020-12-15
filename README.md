@@ -1,6 +1,6 @@
 # gpslogger
 This is a python3 GNSS logger code for polling NMEA sentences on a Raspberry Pi Zero running Raspian Buster OS.
-It requires a GPS module attached to the ttyS0 or serial0 port.
+It requires a GNSS module attached to the ttyS0 or serial0 port.
 
 Code has been tested on ublox NEO-6M and M8N GNSS modules. The following diagram is the set up for connecting an Emlid Reach M2 GNSS receiver:
 
