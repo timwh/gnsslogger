@@ -1,4 +1,4 @@
-# gpslogger
+# gnsslogger
 This is a python3 GNSS logger code for polling NMEA sentences on a Raspberry Pi Zero running Raspian Buster OS.
 It requires a GNSS module attached to the ttyS0 or serial0 port.
 
