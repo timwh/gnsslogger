@@ -9,7 +9,8 @@
 #  - create a folder in /home/pi called data
 #  - requires gpsd service daemon installed and running--- https://gpsd.gitlab.io/gpsd/index.html
 #  - also requires the package gpsd-py3 installed as an interface to gpsd --- https://github.com/MartijnBraam/gpsd-py3
-#  - if the system(startCmd) command in the script below does not work, prior to re-running the script you can start the gpsd daemon with this command: sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
+#  - if the system(startCmd) command in the script below does not work, prior to re-running the script you can start
+#    the gpsd daemon with this command: sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
 # -------------------------------------------------------------------
 
 # LIBRARIES
